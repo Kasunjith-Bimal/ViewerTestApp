@@ -3,3 +3,18 @@
     background-color: brown;
     color: white;
 }
+
+#pdfViewer {
+ height: 800px;
+}
+.content-wrapper1{
+  width: 15%;
+
+}
+
+.content-wrapper2{
+  width: 70%;
+}
+.control-section{
+  width: 100%
+}

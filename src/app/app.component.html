@@ -1,22 +1,4 @@
-<style>
 
-#pdfViewer {
-    height: 800px;
-}
-.content-wrapper1{
-  width: 10%;
-
-}
-
-.content-wrapper2{
-  width: 80%;
-  float: right;
-}
-.control-section{
-  width: 100%;
-}
-
-</style>
 
 
 <div class="control-section">
@@ -36,3 +18,53 @@
     ></ejs-pdfviewer>
   </div>
 </div>
+
+<div class="control-section2">
+  <div *ngFor="let item of documentList; let indexOfelement = index;" >
+    <div [hidden]="!(selectedDocName === item.documentName)">
+      <ejs-pdfviewer
+      id="pdfViewer{{indexOfelement}}"
+      [serviceUrl]="service"
+      [documentPath]='documentList[indexOfelement] | json'   
+      style="height: 800px; margin-top: 0px;"  
+    ></ejs-pdfviewer>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <ejs-pdfviewer
+  id="pdfViewer1"
+  [serviceUrl]="service"
+  [documentPath]='documentList[0] | json' 
+  style="height: 800px; margin-top: 0px;"  
+></ejs-pdfviewer>
+
+<ejs-pdfviewer
+id="pdfViewer2"
+[serviceUrl]="service"
+[documentPath]='documentList[1] | json' 
+style="height: 800px; margin-top: 0px;"  
+></ejs-pdfviewer>
+
+<ejs-pdfviewer
+id="pdfViewer3"
+[serviceUrl]="service"
+[documentPath]='documentList[2] | json' 
+style="height: 800px; margin-top: 0px;"  
+></ejs-pdfviewer>
+
+<ejs-pdfviewer
+id="pdfViewer4"
+[serviceUrl]="service"
+[documentPath]='documentList[3] | json' 
+style="height: 800px; margin-top: 0px;"  
+></ejs-pdfviewer>
+
+<ejs-pdfviewer
+id="pdfViewer5"
+[serviceUrl]="service"
+[documentPath]='documentList[5] | json' 
+style="height: 800px; margin-top: 0px;"  
+></ejs-pdfviewer> -->
